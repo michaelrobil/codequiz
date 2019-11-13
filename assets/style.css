@@ -1,0 +1,170 @@
+body{
+    background-image: url("https://i2.wp.com/wallur.com/wp-content/uploads/2016/12/anime-landscapes-background-4.jpg?fit=1920%2C1080");
+    font-size: 20px;
+    margin: 0px;
+    
+    font-family: monospace;
+}
+
+#container{
+
+    margin : 50px auto;
+    background-color: white 10%;
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    height: 500px;
+    width : 800px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 10px;
+    position: relative;
+}
+#start{
+    padding-top: 50px;
+    font-weight: bolder;
+    word-break: break-all;
+    width:200px;
+    height:100px;
+    border : 2px solid lightgrey;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    left: 300px;
+
+    top:100px;
+    color : lightgrey;
+}
+#start:hover{
+    border: 3px solid lightseagreen;
+    color : lightseagreen;
+}
+
+
+#question{
+    width:500px;
+    height : 125px;
+    position: absolute;
+    top:0;
+}
+#question p{
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+}
+
+#choices{
+    width : 480px;
+    position: absolute;
+    right : 0;
+    top : 125px;
+    padding : 10px
+}
+.choice{
+    display: inline-block;
+    width : 135px;
+    text-align: center;
+    border : 1px solid grey;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+}
+.choice:hover{
+    border : 2px solid grey;
+    font-weight: bold;
+    background-color: tomato;
+}
+
+#timer{
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+}
+#counter{
+    font-size: 3em;
+}
+#btimeGauge{
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+#timeGauge{
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
+#progress{
+    background-color: white;
+    opacity: 0.5;
+    width : 200px;
+    position: absolute;
+    bottom : 0px;
+    right : 0px;
+    padding:5px;
+    text-align: right;
+}
+.prog{
+    width : 25px;
+    height : 25px;
+    border: 1px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left : 5px;
+    margin-right : 5px;
+}
+#scoreContainer{
+    margin : 20px auto;
+    background-color: white;
+    height: 500px;
+    width : 800px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    display: none;
+}
+#scoreContainer p{
+    color: black;
+    position: relative;
+    display: block;
+    width : 800px;
+    height :59px;
+    top:230px;
+    font-size: 40px !important;
+    font-weight: 900;
+    text-align: center;
+}
+#retakeIt {
+    position: fixed;
+    right: 0px;
+    top: 5px;
+    background-color: white ;
+    opacity: 0,7;
+    display: inline-block;
+    width : 135px;
+    text-align: center;
+    border : 1px solid white;
+    border-radius: 20px;
+    cursor: pointer;
+    padding : 5px;
+}
+#retakeIt:hover {
+    background-color: red;
+    color: seashell;
+    font-weight: 300;
+}
+@media screen and (max-width:768px ) {
+    #container {
+        height:60% auto ;
+    }
+
+}
+@media screen and (max-width: 576px) {
+    #container {
+        height:60% auto ;
+    }
+}
