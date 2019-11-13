@@ -159,12 +159,12 @@ body{
 }
 @media screen and (max-width:768px ) {
     #container {
-        height:60% auto ;
+        height:60% ;
     }
 
 }
 @media screen and (max-width: 576px) {
     #container {
-        height:60% auto ;
+        height:60% ;
     }
 }
