@@ -59,6 +59,7 @@ const gaugeWidth = 150; // 150px
 const gaugeUnit = gaugeWidth / questionTime;
 let TIMER;
 let score = 0;
+var userInitials;
 
 // Reset button
 var fullReset = document.getElementById("retakeIt");
@@ -138,12 +139,19 @@ function checkAnswer(answer) {
         // end the quiz and show the score
         clearInterval(TIMER);
         scoreRender();
+        userInitials = prompt("Enter your initials to save your score.");
         // Store the user initials and score to the localstorage
-        var userInitials = prompt("Enter your initials to save your score.");
-        var highScore = {
-            [userInitials]: score
-        }
-        window.localStorage.setItem("user", JSON.stringify(highScore));
+            var existingEntries = JSON.parse(localStorage.getItem("user"));
+            if(existingEntries == null) {existingEntries = [];}
+            console.log(existingEntries);
+            var userInitials;
+            var entry = {
+                "title" : userInitials,
+                "text" : score
+            };
+            localStorage.setItem("entry", JSON.stringify(entry));
+            existingEntries.push(entry);
+            localStorage.setItem("user", JSON.stringify(existingEntries));
     }
 }
 // answer is correct
