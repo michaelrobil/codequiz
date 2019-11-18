@@ -11,44 +11,42 @@ const scoreDiv = document.getElementById("scoreContainer");
 const retakIt = document.getElementById("retakeIt");
 
 // create our questions
-let questions = [
-    {
-        question: "What does HTML stand for?",
-        imgSrc: "img/html.png",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        correct: "A"
-    }, {
-        question: "What does CSS stand for?",
-        imgSrc: "img/css.png",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        correct: "B"
-    }, {
-        question: "What does JS stand for?",
-        imgSrc: "img/js.png",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        correct: "C"
-    }, {
-        question: "What does HTML stand for?",
-        imgSrc: "img/html.png",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        correct: "A"
-    }, {
-        question: "What does HTML stand for?",
-        imgSrc: "img/html.png",
-        choiceA: "Correct",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        correct: "A"
-    }
-];
+let questions = [{
+    question: "What is the correct HTML element for playing audio files?",
+    imgSrc: "img/html.png",
+    choiceA: "h1",
+    choiceB: "em",
+    choiceC: "audio",
+    correct: "C"
+}, {
+    question: "Which HTML element defines the title of a document?",
+    imgSrc: "img/css.png",
+    choiceA: "meter",
+    choiceB: "header",
+    choiceC: "title",
+    correct: "C"
+}, {
+    question: "What is the correct HTML element to define emphasized text?",
+    imgSrc: "img/js.png",
+    choiceA: "em",
+    choiceB: "h1",
+    choiceC: "br",
+    correct: "A"
+}, {
+    question: "Which HTML element is used to display a scalar measurement within a range?",
+    imgSrc: "img/html.png",
+    choiceA: "footer",
+    choiceB: "meter",
+    choiceC: "nav",
+    correct: "B"
+}, {
+    question: "Which of these elements are all <table> elements?",
+    imgSrc: "img/html.png",
+    choiceA: "title",
+    choiceB: "tr",
+    choiceC: "textarea",
+    correct: "B"
+}];
 // create some variables
 
 const lastQuestion = questions.length - 1;
@@ -63,7 +61,7 @@ var userInitials;
 
 // Reset button
 var fullReset = document.getElementById("retakeIt");
-fullReset.addEventListener('click', function (e) {
+fullReset.addEventListener('click', function(e) {
     location.reload();
 }, false);
 
@@ -141,17 +139,17 @@ function checkAnswer(answer) {
         scoreRender();
         userInitials = prompt("Enter your initials to save your score.");
         // Store the user initials and score to the localstorage
-            var existingEntries = JSON.parse(localStorage.getItem("user"));
-            if(existingEntries == null) {existingEntries = [];}
-            console.log(existingEntries);
-            var userInitials;
-            var entry = {
-                "title" : userInitials,
-                "text" : score
-            };
-            localStorage.setItem("entry", JSON.stringify(entry));
-            existingEntries.push(entry);
-            localStorage.setItem("user", JSON.stringify(existingEntries));
+        var existingEntries = JSON.parse(localStorage.getItem("user"));
+        if (existingEntries == null) { existingEntries = []; }
+        console.log(existingEntries);
+        var userInitials;
+        var entry = {
+            "title": userInitials,
+            "text": score
+        };
+        localStorage.setItem("entry", JSON.stringify(entry));
+        existingEntries.push(entry);
+        localStorage.setItem("user", JSON.stringify(existingEntries));
     }
 }
 // answer is correct
