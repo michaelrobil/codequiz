@@ -40,7 +40,7 @@ let questions = [{
     choiceC: "nav",
     correct: "B"
 }, {
-    question: "Which of these elements are all <table> elements?",
+    question: "Which of these elements are table elements?",
     imgSrc: "img/html.png",
     choiceA: "title",
     choiceB: "tr",
