@@ -1,5 +1,5 @@
 # codequiz
-These assessments are typically a combination of multiple-choice questions.
+Web Application typically a combination of multiple-choice questions.
 
 The user arrives at the landing page and is presented with a call-to-action to "Start Quiz", Also in the top-right corner button to reset the quiz.
 
