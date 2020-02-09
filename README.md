@@ -1,4 +1,4 @@
-# codequiz
+# Code Quiz
 
 ## About
 This web application is a quiz of multiple-choice questions.
