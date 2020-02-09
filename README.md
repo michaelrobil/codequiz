@@ -3,6 +3,9 @@
 ## About
 This web application is a quiz of multiple-choice questions.
 
+## Aplication Screenshot
+![15-quiz-code](https://user-images.githubusercontent.com/56613553/74096812-35d11c00-4ac9-11ea-9dfc-e8b5a385136a.png)
+
 ## Contributors
 [Michael Robil](https://github.com/michaelrobil)
 
